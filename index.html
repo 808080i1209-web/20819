@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -31,9 +30,9 @@
                 </div>
             </div>
             <nav class="flex gap-1 bg-slate-100 p-1 rounded-lg text-xs md:text-sm">
-                <button onclick="switchTab('explore')" id="btn-explore" class="tab-btn px-3 py-1.5 rounded-md font-medium bg-white text-emerald-600 shadow-sm transition">1. 생애 주기</button>
-                <button onclick="switchTab('calc')" id="btn-calc" class="tab-btn px-3 py-1.5 rounded-md font-medium text-slate-600 hover:text-slate-900 transition">2. 가치소비</button>
-                <button onclick="switchTab('poster')" id="btn-poster" class="tab-btn px-3 py-1.5 rounded-md font-medium text-slate-600 hover:text-slate-900 transition">3. 포스터</button>
+                <button onclick="switchTab('explore')" id="btn-explore" class="tab-btn px-3 py-1.5 rounded-md font-medium bg-white text-emerald-600 shadow-sm transition">1. 생애주기</button>
+                <button onclick="switchTab('calc')" id="btn-calc" class="tab-btn px-3 py-1.5 rounded-md font-medium text-slate-600 hover:text-slate-900 transition">2. 가치소비 계산기</button>
+                <button onclick="switchTab('poster')" id="btn-poster" class="tab-btn px-3 py-1.5 rounded-md font-medium text-slate-600 hover:text-slate-900 transition">3. 포스터 제작기</button>
             </nav>
         </div>
     </header>
@@ -41,8 +40,7 @@
     <!-- Main Content -->
     <main class="flex-grow max-w-4xl w-full mx-auto px-4 py-6">
         
-        <!-- SECTION 1: 의류 생애주기 탐색 (1~2차시 테마) -->
-        <section id="sec-explore" class="tab-content block space-y-6">
+                <section id="sec-explore" class="tab-content block space-y-6">
             <div class="bg-emerald-600 rounded-2xl p-6 md:p-8 text-white shadow-xl relative overflow-hidden">
                 <div class="relative z-10 max-w-lg">
                     <span class="bg-emerald-500 text-white text-xs font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">의류 생애주기 탐구</span>
@@ -76,59 +74,30 @@
                     </div>
                 </div>
 
-                <!-- 세로 카드형 리스트 (스크린샷 피드백 반영) -->
-                <div class="flex flex-col gap-3">
-                    <!-- 1단계 -->
-                    <div class="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm flex items-center justify-between relative overflow-hidden">
-                        <div class="flex items-center gap-4">
-                            <span class="p-3 bg-rose-50 text-rose-500 rounded-xl shrink-0">
-                                <i data-lucide="droplets" class="w-6 h-6"></i>
-                            </span>
-                            <div>
-                                <h5 class="font-bold text-slate-900 text-sm md:text-base">1단계: 과도한 자원 채취</h5>
-                                <p class="text-xs text-slate-400 mt-0.5">석유화학 섬유 및 엄청난 양의 물 소비</p>
-                            </div>
-                        </div>
-                        <span class="text-rose-100 font-extrabold text-2xl tracking-wider select-none pr-2">01</span>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <div class="bg-white p-5 rounded-xl border border-slate-100 shadow-sm relative overflow-hidden">
+                        <span class="text-rose-500 font-extrabold text-2xl absolute right-4 top-4 opacity-20">01</span>
+                        <div class="text-rose-600 mb-3"><i data-lucide="shovel" class="w-8 h-8"></i></div>
+                        <h5 class="font-bold text-slate-900">Take (자원 채취)</h5>
+                        <p class="text-xs text-slate-500 mt-2">목화 재배에 매년 수조 리터의 물과 농약이 소모되고, 합성 섬유(폴리에스터) 생산을 위해 다량의 석유가 정제됩니다.</p>
                     </div>
-                    <!-- 2단계 -->
-                    <div class="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm flex items-center justify-between relative overflow-hidden">
-                        <div class="flex items-center gap-4">
-                            <span class="p-3 bg-rose-50 text-rose-500 rounded-xl shrink-0">
-                                <i data-lucide="factory" class="w-6 h-6"></i>
-                            </span>
-                            <div>
-                                <h5 class="font-bold text-slate-900 text-sm md:text-base">2단계: 화학 물질 오염 생산</h5>
-                                <p class="text-xs text-slate-400 mt-0.5">대량의 이산화탄소와 유독 염료 배출</p>
-                            </div>
-                        </div>
-                        <span class="text-rose-100 font-extrabold text-2xl tracking-wider select-none pr-2">02</span>
+                    <div class="bg-white p-5 rounded-xl border border-slate-100 shadow-sm relative overflow-hidden">
+                        <span class="text-rose-500 font-extrabold text-2xl absolute right-4 top-4 opacity-20">02</span>
+                        <div class="text-rose-600 mb-3"><i data-lucide="factory" class="w-8 h-8"></i></div>
+                        <h5 class="font-bold text-slate-900">Make (생산 & 가공)</h5>
+                        <p class="text-xs text-slate-500 mt-2">염색 과정에서 미세 플라스틱과 독성 화학물질이 강과 바다로 유출되며, 막대한 이산화탄소가 배출됩니다.</p>
                     </div>
-                    <!-- 3단계 -->
-                    <div class="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm flex items-center justify-between relative overflow-hidden">
-                        <div class="flex items-center gap-4">
-                            <span class="p-3 bg-rose-50 text-rose-500 rounded-xl shrink-0">
-                                <i data-lucide="shopping-bag" class="w-6 h-6"></i>
-                            </span>
-                            <div>
-                                <h5 class="font-bold text-slate-900 text-sm md:text-base">3단계: 초고속 유통 및 소비</h5>
-                                <p class="text-xs text-slate-400 mt-0.5">단 몇 번만 입고 쉽게 버려지는 의류</p>
-                            </div>
-                        </div>
-                        <span class="text-rose-100 font-extrabold text-2xl tracking-wider select-none pr-2">03</span>
+                    <div class="bg-white p-5 rounded-xl border border-slate-100 shadow-sm relative overflow-hidden">
+                        <span class="text-rose-500 font-extrabold text-2xl absolute right-4 top-4 opacity-20">03</span>
+                        <div class="text-rose-600 mb-3"><i data-lucide="shopping-bag" class="w-8 h-8"></i></div>
+                        <h5 class="font-bold text-slate-900">Use (단기 착용)</h5>
+                        <p class="text-xs text-slate-500 mt-2">유행이 지나면 입지 않는 옷들이 옷장 구석에 쌓입니다. 평균적으로 옷 한 벌의 수명은 패스트 패션으로 인해 절반 가까이 단축되었습니다.</p>
                     </div>
-                    <!-- 4단계 -->
-                    <div class="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm flex items-center justify-between relative overflow-hidden">
-                        <div class="flex items-center gap-4">
-                            <span class="p-3 bg-rose-50 text-rose-500 rounded-xl shrink-0">
-                                <i data-lucide="trash-2" class="w-6 h-6"></i>
-                            </span>
-                            <div>
-                                <h5 class="font-bold text-slate-900 text-sm md:text-base">4단계: 쓰레기 산과 환경 파괴</h5>
-                                <p class="text-xs text-slate-400 mt-0.5">미세 플라스틱 방출 및 썩지 않는 폐기물</p>
-                            </div>
-                        </div>
-                        <span class="text-rose-100 font-extrabold text-2xl tracking-wider select-none pr-2">04</span>
+                    <div class="bg-white p-5 rounded-xl border border-slate-100 shadow-sm relative overflow-hidden">
+                        <span class="text-rose-500 font-extrabold text-2xl absolute right-4 top-4 opacity-20">04</span>
+                        <div class="text-rose-600 mb-3"><i data-lucide="trash-2" class="w-8 h-8"></i></div>
+                        <h5 class="font-bold text-slate-900">Waste (폐기)</h5>
+                        <p class="text-xs text-slate-500 mt-2">매초 트럭 한 대 분량의 의류가 매립되거나 소각됩니다. 썩지 않는 합성 섬유는 수백 년 동안 환경을 오염시킵니다.</p>
                     </div>
                 </div>
             </div>
@@ -145,66 +114,36 @@
                     </div>
                 </div>
 
-                <!-- 순환 경제 세로 카드형 리스트 -->
-                <div class="flex flex-col gap-3">
-                    <!-- 1단계 -->
-                    <div class="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm flex items-center justify-between relative overflow-hidden">
-                        <div class="flex items-center gap-4">
-                            <span class="p-3 bg-emerald-50 text-emerald-600 rounded-xl shrink-0">
-                                <i data-lucide="leaf" class="w-6 h-6"></i>
-                            </span>
-                            <div>
-                                <h5 class="font-bold text-slate-900 text-sm md:text-base">1단계: 친환경 원료 채택</h5>
-                                <p class="text-xs text-slate-400 mt-0.5">오가닉 면 및 선인장 가죽 등 친환경 원재료 도입</p>
-                            </div>
-                        </div>
-                        <span class="text-emerald-100 font-extrabold text-2xl tracking-wider select-none pr-2">01</span>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <div class="bg-white p-5 rounded-xl border border-slate-100 shadow-sm relative overflow-hidden">
+                        <span class="text-emerald-500 font-extrabold text-2xl absolute right-4 top-4 opacity-20">01</span>
+                        <div class="text-emerald-600 mb-3"><i data-lucide="flower" class="w-8 h-8"></i></div>
+                        <h5 class="font-bold text-slate-900">Eco Source</h5>
+                        <p class="text-xs text-slate-500 mt-2">유기농 면, 재생 나일론, 선인장 가죽 등 환경 파괴가 적고 지속 가능한 원재료를 채택합니다.</p>
                     </div>
-                    <!-- 2단계 -->
-                    <div class="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm flex items-center justify-between relative overflow-hidden">
-                        <div class="flex items-center gap-4">
-                            <span class="p-3 bg-emerald-50 text-emerald-600 rounded-xl shrink-0">
-                                <i data-lucide="shield-check" class="w-6 h-6"></i>
-                            </span>
-                            <div>
-                                <h5 class="font-bold text-slate-900 text-sm md:text-base">2단계: 저탄소 녹색 공정</h5>
-                                <p class="text-xs text-slate-400 mt-0.5">재생에너지 사용 및 화학 배출 없는 친환경 염색</p>
-                            </div>
-                        </div>
-                        <span class="text-emerald-100 font-extrabold text-2xl tracking-wider select-none pr-2">02</span>
+                    <div class="bg-white p-5 rounded-xl border border-slate-100 shadow-sm relative overflow-hidden">
+                        <span class="text-emerald-500 font-extrabold text-2xl absolute right-4 top-4 opacity-20">02</span>
+                        <div class="text-emerald-600 mb-3"><i data-lucide="shield-check" class="w-8 h-8"></i></div>
+                        <h5 class="font-bold text-slate-900">Green Make</h5>
+                        <p class="text-xs text-slate-500 mt-2">재생 에너지를 사용하는 공장에서 유해 화학물질 배출을 전면 차단하여 깨끗하게 염색하고 생산합니다.</p>
                     </div>
-                    <!-- 3단계 -->
-                    <div class="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm flex items-center justify-between relative overflow-hidden">
-                        <div class="flex items-center gap-4">
-                            <span class="p-3 bg-emerald-50 text-emerald-600 rounded-xl shrink-0">
-                                <i data-lucide="repeat" class="w-6 h-6"></i>
-                            </span>
-                            <div>
-                                <h5 class="font-bold text-slate-900 text-sm md:text-base">3단계: 의류 공유 및 가치 소비</h5>
-                                <p class="text-xs text-slate-400 mt-0.5">수선하여 입기 및 의류 렌탈 중고 문화 구축</p>
-                            </div>
-                        </div>
-                        <span class="text-emerald-100 font-extrabold text-2xl tracking-wider select-none pr-2">03</span>
+                    <div class="bg-white p-5 rounded-xl border border-slate-100 shadow-sm relative overflow-hidden">
+                        <span class="text-emerald-500 font-extrabold text-2xl absolute right-4 top-4 opacity-20">03</span>
+                        <div class="text-emerald-600 mb-3"><i data-lucide="repeat" class="w-8 h-8"></i></div>
+                        <h5 class="font-bold text-slate-900">Slow & Share</h5>
+                        <p class="text-xs text-slate-500 mt-2">수선하여 오래 입기, 의류 대여 서비스, 중고 거래 문화를 활성화하여 옷의 가치를 최대한 보존합니다.</p>
                     </div>
-                    <!-- 4단계 -->
-                    <div class="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm flex items-center justify-between relative overflow-hidden">
-                        <div class="flex items-center gap-4">
-                            <span class="p-3 bg-emerald-50 text-emerald-600 rounded-xl shrink-0">
-                                <i data-lucide="recycle" class="w-6 h-6"></i>
-                            </span>
-                            <div>
-                                <h5 class="font-bold text-slate-900 text-sm md:text-base">4단계: 자원 순환 및 리사이클</h5>
-                                <p class="text-xs text-slate-400 mt-0.5">화학적 분해 재원사화 및 고부가가치 업사이클링</p>
-                            </div>
-                        </div>
-                        <span class="text-emerald-100 font-extrabold text-2xl tracking-wider select-none pr-2">04</span>
+                    <div class="bg-white p-5 rounded-xl border border-slate-100 shadow-sm relative overflow-hidden">
+                        <span class="text-emerald-500 font-extrabold text-2xl absolute right-4 top-4 opacity-20">04</span>
+                        <div class="text-emerald-600 mb-3"><i data-lucide="recycle" class="w-8 h-8"></i></div>
+                        <h5 class="font-bold text-slate-900">Recycle & Up</h5>
+                        <p class="text-xs text-slate-500 mt-2">버려진 옷을 화학적으로 분해해 다시 원사로 뽑아내거나, 독창적인 업사이클링 제품으로 재탄생시킵니다.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION 2: 가치소비 & 탄소 발자국 계산기 (3차시 테마) -->
-        <section id="sec-calc" class="tab-content hidden space-y-6">
+                <section id="sec-calc" class="tab-content hidden space-y-6">
             <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
                 <h3 class="font-bold text-xl text-slate-900 flex items-center gap-2">
                     <i data-lucide="calculator" class="text-emerald-600 w-6 h-6"></i>
@@ -309,7 +248,7 @@
             </div>
         </section>
 
-        <!-- SECTION 3: 디지털 포스터 제작기 (4~5차시 테마) -->
+        
         <section id="sec-poster" class="tab-content hidden space-y-6">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
                 
@@ -324,7 +263,7 @@
                     <div>
                         <label class="block text-xs font-bold text-slate-700 mb-2">테마 스타일</label>
                         <div class="grid grid-cols-2 gap-2" id="theme-btn-container">
-                            <button id="btn-theme-emerald" onclick="changePosterTheme('emerald')" class="py-2.5 px-3 border-2 border-emerald-500 rounded-xl text-xs font-bold bg-emerald-50/70 text-emerald-700 text-center shadow-sm transition">에메랄드 포레스트</button>
+                            <button id="btn-theme-emerald" onclick="changePosterTheme('emerald')" class="py-2.5 px-3 border-2 border-emerald-500 rounded-xl text-xs font-bold bg-emerald-50 text-emerald-700 text-center shadow-sm transition">에메랄드 포레스트</button>
                             <button id="btn-theme-dark" onclick="changePosterTheme('dark')" class="py-2.5 px-3 border-2 border-transparent rounded-xl text-xs font-semibold bg-slate-100 text-slate-700 text-center hover:bg-slate-200 transition">어반 다크</button>
                             <button id="btn-theme-rose" onclick="changePosterTheme('rose')" class="py-2.5 px-3 border-2 border-transparent rounded-xl text-xs font-semibold bg-slate-100 text-slate-700 text-center hover:bg-slate-200 transition">로즈 핑크</button>
                             <button id="btn-theme-earth" onclick="changePosterTheme('earth')" class="py-2.5 px-3 border-2 border-transparent rounded-xl text-xs font-semibold bg-slate-100 text-slate-700 text-center hover:bg-slate-200 transition">얼스 브라운</button>
@@ -531,16 +470,19 @@
             const team = document.getElementById('p-team');
             const category = document.getElementById('poster-category');
 
+            // 테마 변경용 버튼 요소들
             const btnEmerald = document.getElementById('btn-theme-emerald');
             const btnDark = document.getElementById('btn-theme-dark');
             const btnRose = document.getElementById('btn-theme-rose');
             const btnEarth = document.getElementById('btn-theme-earth');
 
+            // 1. 모든 테마 스타일 버튼 클래스 초기화 (기본 회색 연한 배경에 테두리 없음)
             const allThemeBtns = [btnEmerald, btnDark, btnRose, btnEarth];
             allThemeBtns.forEach(btn => {
                 btn.className = "py-2.5 px-3 border-2 border-transparent rounded-xl text-xs font-semibold bg-slate-100 text-slate-700 text-center hover:bg-slate-200 transition";
             });
 
+            // 2. 포스터 캔버스 테마 변경 & 3. 해당 버튼 활성화 색상 링(보더) 지정
             canvas.className = "w-full max-w-[360px] aspect-[1/1.4] rounded-3xl p-8 shadow-2xl flex flex-col justify-between relative overflow-hidden transition-all duration-300 ";
 
             if (theme === 'emerald') {
@@ -553,7 +495,8 @@
                 team.className = "text-xs font-bold text-white mt-0.5";
                 category.className = "text-[10px] uppercase tracking-widest text-emerald-100 font-semibold";
 
-                btnEmerald.className = "py-2.5 px-3 border-2 border-emerald-500 rounded-xl text-xs font-bold bg-emerald-50/70 text-emerald-700 text-center shadow-sm transition";
+                // 버튼 하이라이트 (초록 링)
+                btnEmerald.className = "py-2.5 px-3 border-2 border-emerald-500 rounded-xl text-xs font-bold bg-emerald-50 text-emerald-700 text-center shadow-sm transition";
             } 
             else if (theme === 'dark') {
                 canvas.classList.add('bg-slate-900', 'text-white');
@@ -565,6 +508,7 @@
                 team.className = "text-xs font-bold text-emerald-400 mt-0.5";
                 category.className = "text-[10px] uppercase tracking-widest text-slate-400 font-semibold";
 
+                // 버튼 하이라이트 (어반 다크도 다른 링 테마처럼 '다크 그레이 링' + '밝은 배경' 스타일로 통일)
                 btnDark.className = "py-2.5 px-3 border-2 border-slate-800 rounded-xl text-xs font-bold bg-slate-50 text-slate-800 text-center shadow-sm transition";
             } 
             else if (theme === 'rose') {
@@ -577,7 +521,8 @@
                 team.className = "text-xs font-bold text-white mt-0.5";
                 category.className = "text-[10px] uppercase tracking-widest text-rose-100 font-semibold";
 
-                btnRose.className = "py-2.5 px-3 border-2 border-rose-500 rounded-xl text-xs font-bold bg-rose-50/70 text-rose-700 text-center shadow-sm transition";
+                // 버튼 하이라이트 (로즈 핑크 링)
+                btnRose.className = "py-2.5 px-3 border-2 border-rose-500 rounded-xl text-xs font-bold bg-rose-50 text-rose-700 text-center shadow-sm transition";
             } 
             else if (theme === 'earth') {
                 canvas.classList.add('bg-amber-800', 'text-amber-50');
@@ -589,7 +534,8 @@
                 team.className = "text-xs font-bold text-emerald-300 mt-0.5";
                 category.className = "text-[10px] uppercase tracking-widest text-amber-200 font-semibold";
 
-                btnEarth.className = "py-2.5 px-3 border-2 border-amber-700 rounded-xl text-xs font-bold bg-amber-50/70 text-amber-900 text-center shadow-sm transition";
+                // 버튼 하이라이트 (얼스 브라운 링)
+                btnEarth.className = "py-2.5 px-3 border-2 border-amber-700 rounded-xl text-xs font-bold bg-amber-50 text-amber-900 text-center shadow-sm transition";
             }
         }
 
@@ -642,5 +588,3 @@
 </html>
 
 ```
-
-
